@@ -8,7 +8,7 @@
 import UIKit
 
 //予定のリスト
-var todo_list = ["a"]
+var todo_list = [""]
 //ショートカットリスト
 var shourt_cut_list = [String]()
 
