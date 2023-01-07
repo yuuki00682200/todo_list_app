@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		970F10342959830200DC3105 /* add aplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F10332959830200DC3105 /* add aplan.swift */; };
 		9752D74F29580782006D7957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752D74E29580782006D7957 /* AppDelegate.swift */; };
 		9752D75129580782006D7957 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752D75029580782006D7957 /* SceneDelegate.swift */; };
 		9752D75329580782006D7957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752D75229580782006D7957 /* ViewController.swift */; };
@@ -15,11 +14,9 @@
 		9752D75829580783006D7957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9752D75729580783006D7957 /* Assets.xcassets */; };
 		9752D75B29580783006D7957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9752D75929580783006D7957 /* LaunchScreen.storyboard */; };
 		9767EE4F295D2A5000E414CB /* mark_arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9767EE4E295D2A5000E414CB /* mark_arrow_down.png */; };
-		979219DF29601AD700D91023 /* adda_shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979219DE29601AD700D91023 /* adda_shortcut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		970F10332959830200DC3105 /* add aplan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "add aplan.swift"; sourceTree = "<group>"; };
 		9752D74B29580782006D7957 /* todo list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "todo list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9752D74E29580782006D7957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9752D75029580782006D7957 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +26,6 @@
 		9752D75A29580783006D7957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9752D75C29580783006D7957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9767EE4E295D2A5000E414CB /* mark_arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark_arrow_down.png; sourceTree = SOURCE_ROOT; };
-		979219DE29601AD700D91023 /* adda_shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adda_shortcut.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +58,6 @@
 		9752D74D29580782006D7957 /* todo list */ = {
 			isa = PBXGroup;
 			children = (
-				979219DE29601AD700D91023 /* adda_shortcut.swift */,
-				970F10332959830200DC3105 /* add aplan.swift */,
 				9752D74E29580782006D7957 /* AppDelegate.swift */,
 				9752D75029580782006D7957 /* SceneDelegate.swift */,
 				9752D75229580782006D7957 /* ViewController.swift */,
@@ -149,10 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9752D75329580782006D7957 /* ViewController.swift in Sources */,
-				979219DF29601AD700D91023 /* adda_shortcut.swift in Sources */,
 				9752D74F29580782006D7957 /* AppDelegate.swift in Sources */,
 				9752D75129580782006D7957 /* SceneDelegate.swift in Sources */,
-				970F10342959830200DC3105 /* add aplan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
