@@ -33,6 +33,7 @@ class TableViewController: UITableViewController{
     
     //アクションシート
     @objc func didTapAddItemButton(_ sender: UIBarButtonItem){
+        self.performSegue(withIdentifier: "add_View", sender: nil)
         
     }
     
