@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9748468F2972D18900628823 /* Delete_a_shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9748468E2972D18900628823 /* Delete_a_shortcut.swift */; };
 		9752D74F29580782006D7957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752D74E29580782006D7957 /* AppDelegate.swift */; };
 		9752D75129580782006D7957 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752D75029580782006D7957 /* SceneDelegate.swift */; };
 		9752D75329580782006D7957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752D75229580782006D7957 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9748468E2972D18900628823 /* Delete_a_shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delete_a_shortcut.swift; sourceTree = "<group>"; };
 		9752D74B29580782006D7957 /* todo list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "todo list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9752D74E29580782006D7957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9752D75029580782006D7957 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		9752D74D29580782006D7957 /* todo list */ = {
 			isa = PBXGroup;
 			children = (
+				9748468E2972D18900628823 /* Delete_a_shortcut.swift */,
 				9752D74E29580782006D7957 /* AppDelegate.swift */,
 				9752D75029580782006D7957 /* SceneDelegate.swift */,
 				9752D75229580782006D7957 /* ViewController.swift */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97C5387D297247F500ABAFDD /* Add_event.swift in Sources */,
+				9748468F2972D18900628823 /* Delete_a_shortcut.swift in Sources */,
 				9752D75329580782006D7957 /* ViewController.swift in Sources */,
 				9752D74F29580782006D7957 /* AppDelegate.swift in Sources */,
 				9752D75129580782006D7957 /* SceneDelegate.swift in Sources */,

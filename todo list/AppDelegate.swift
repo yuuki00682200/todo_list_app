@@ -10,6 +10,9 @@ import UIKit
 //予定のリスト
 var todo_list = [""]
 
+//segmentname
+var segmentNames = [""]
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

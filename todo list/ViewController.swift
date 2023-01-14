@@ -18,12 +18,12 @@ class TableViewController: UITableViewController{
         //予定を読み込む
         todo_list = UserDefaults.standard.object(forKey: "todo_list_key") as! [String]
         
-        let segmentNames = ["やること", "完了したこと", "やりたいこと"]
+        //ショートカットを追加
+        segmentNames = UserDefaults.standard.object(forKey: "segmentname_key") as! [String]
         segment.removeAllSegments()
         for (index, name) in segmentNames.enumerated() {
             segment.insertSegment(withTitle: name, at: index, animated: false)
         }
-        
     }
     
     @IBAction func selectedSegment(_ sender: Any) {
@@ -46,16 +46,18 @@ class TableViewController: UITableViewController{
         //        let accessory = UITableViewCell.AccessoryType = todo_check[indexPath.row] ? .checkmark: .none
         //        TodoCell.accessoryType = accessory
         
+        //更新
+        let newIndex = todo_list.count
+        tableView.insertRows(at: [IndexPath(row: newIndex, section: 0)], with: .top)
+        
         return TodoCell
     }
     
     //予定を追加
+    
     @IBAction func Additional_menu(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    //更新
-    tableView.insertRows(at: [IndexPath(row: newIndex, section: 0)], with: .top)
     
     //セルの消去
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
