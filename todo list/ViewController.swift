@@ -7,14 +7,32 @@
 
 import UIKit
 
+//ショートカットリスト
+var segmentcontrol_list = ["a","b","c"]
+
 class TableViewController: UITableViewController{
+    //セグメントコントロール
+    @IBOutlet weak var segmentcontrol: UISegmentedControl!
+    var segment_count = 1
+    var todo_check = [Bool]()
+    
+    
+    
     override func viewDidLoad() {
 //        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.didTapAddItemButton(_:)))
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
         //予定を読み込む
         todo_list = UserDefaults.standard.object(forKey: "todo_list_key") as! [String]
         
+        segmentcontrol.selectedSegmentIndex = segment_count
         super.viewDidLoad()
+    }
+    
+    //セグメントコントロール
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    let segmentedControl = UISegmentedControl(items: segmentcontrol_list)
+    @IBAction func selectedSegment(_ sender: Any) {
+        tableView.reloadData()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,7 +47,16 @@ class TableViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let TodoCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         TodoCell.textLabel!.text = todo_list[indexPath.row]
+        
+//        let accessory = UITableViewCell.AccessoryType = todo_check[indexPath.row] ? .checkmark: .none
+//        TodoCell.accessoryType = accessory
+        
         return TodoCell
+    }
+    
+    //セグメントリスト
+    @IBAction func segment_select(_ sender: Any) {
+        //セグメント番号条件分岐
     }
     
     //予定を追加

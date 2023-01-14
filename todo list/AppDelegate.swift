@@ -9,8 +9,6 @@ import UIKit
 
 //予定のリスト
 var todo_list = [""]
-//ショートカットリスト
-var shourt_cut_list = [String]()
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

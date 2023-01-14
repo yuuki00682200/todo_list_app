@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97317C7D29695E86000F1080 /* add_controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97317C7C29695E86000F1080 /* add_controller.swift */; };
 		9752D74F29580782006D7957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752D74E29580782006D7957 /* AppDelegate.swift */; };
 		9752D75129580782006D7957 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752D75029580782006D7957 /* SceneDelegate.swift */; };
 		9752D75329580782006D7957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9752D75229580782006D7957 /* ViewController.swift */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		97317C7C29695E86000F1080 /* add_controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = add_controller.swift; sourceTree = "<group>"; };
 		9752D74B29580782006D7957 /* todo list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "todo list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9752D74E29580782006D7957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9752D75029580782006D7957 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 				9752D74E29580782006D7957 /* AppDelegate.swift */,
 				9752D75029580782006D7957 /* SceneDelegate.swift */,
 				9752D75229580782006D7957 /* ViewController.swift */,
-				97317C7C29695E86000F1080 /* add_controller.swift */,
 				9752D75429580782006D7957 /* Main.storyboard */,
 				9752D75729580783006D7957 /* Assets.xcassets */,
 				9752D75929580783006D7957 /* LaunchScreen.storyboard */,
@@ -144,7 +141,6 @@
 				9752D75329580782006D7957 /* ViewController.swift in Sources */,
 				9752D74F29580782006D7957 /* AppDelegate.swift in Sources */,
 				9752D75129580782006D7957 /* SceneDelegate.swift in Sources */,
-				97317C7D29695E86000F1080 /* add_controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
