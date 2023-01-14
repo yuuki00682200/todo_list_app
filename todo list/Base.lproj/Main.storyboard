@@ -50,7 +50,7 @@
                     <navigationItem key="navigationItem" id="YSC-2i-0oi">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="pCO-EY-Ert">
-                            <rect key="frame" x="108.5" y="5.5" width="197" height="33"/>
+                            <rect key="frame" x="26" y="6" width="362" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                             <segments>
@@ -65,12 +65,12 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="segmentcontrol" destination="pCO-EY-Ert" id="z7G-Rb-hh4"/>
+                        <outlet property="segment" destination="pCO-EY-Ert" id="tmU-MC-Mii"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25I-UL-8sH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="-364"/>
+            <point key="canvasLocation" x="1013.0434782608696" y="-364.28571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r3P-UU-anO">

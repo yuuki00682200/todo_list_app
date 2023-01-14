@@ -9,24 +9,23 @@ import UIKit
 
 class TableViewController: UITableViewController{
     
-    
+    @IBOutlet weak var segment: UISegmentedControl!
+
     override func viewDidLoad() {
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.didTapAddItemButton(_:)))
+        super.viewDidLoad()
+
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
         //予定を読み込む
         todo_list = UserDefaults.standard.object(forKey: "todo_list_key") as! [String]
         
-        segmentcontrol.selectedSegmentIndex = segment_count
-        super.viewDidLoad()
-    }
-    
-    //セグメントコントロール
-    @IBOutlet weak var segment: UISegmentedControl!
-    let segmentNames = ["やること", "完了したこと", "やりたいこと"]
+        let segmentNames = ["やること", "完了したこと", "やりたいこと"]
         segment.removeAllSegments()
         for (index, name) in segmentNames.enumerated() {
             segment.insertSegment(withTitle: name, at: index, animated: false)
         }
+    }
+    
+    
     
     
     @IBAction func selectedSegment(_ sender: Any) {
@@ -46,8 +45,8 @@ class TableViewController: UITableViewController{
         let TodoCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         TodoCell.textLabel!.text = todo_list[indexPath.row]
         
-//        let accessory = UITableViewCell.AccessoryType = todo_check[indexPath.row] ? .checkmark: .none
-//        TodoCell.accessoryType = accessory
+        //        let accessory = UITableViewCell.AccessoryType = todo_check[indexPath.row] ? .checkmark: .none
+        //        TodoCell.accessoryType = accessory
         
         return TodoCell
     }
