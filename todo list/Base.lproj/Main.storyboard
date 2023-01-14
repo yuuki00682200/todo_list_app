@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,11 +20,12 @@
                             <rect key="frame" x="0.0" y="121.5" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="予定を追加">
+                            <buttonConfiguration key="configuration" style="filled" title="≡">
                                 <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="33"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="add_a_plan_button:" destination="plT-ys-cKA" eventType="touchUpInside" id="sC0-G5-r9C"/>
+                                <action selector="Additional_menu:" destination="plT-ys-cKA" eventType="touchUpInside" id="82b-Zg-Aa1"/>
+                                <segue destination="b7h-B9-yFC" kind="show" id="vcU-ta-pYE"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -50,7 +52,7 @@
                     <navigationItem key="navigationItem" id="YSC-2i-0oi">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="pCO-EY-Ert">
-                            <rect key="frame" x="26" y="6" width="362" height="33"/>
+                            <rect key="frame" x="26" y="5.5" width="362" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                             <segments>
@@ -59,9 +61,6 @@
                                 <segment title=""/>
                             </segments>
                             <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
-                            <connections>
-                                <action selector="segment_select:" destination="plT-ys-cKA" eventType="valueChanged" id="lvq-U4-Wel"/>
-                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
@@ -72,6 +71,35 @@
             </objects>
             <point key="canvasLocation" x="1013.0434782608696" y="-364.28571428571428"/>
         </scene>
+        <!--Add event-->
+        <scene sceneID="3nY-Tl-K1r">
+            <objects>
+                <viewController id="b7h-B9-yFC" customClass="Add_event" customModule="todo_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wu2-E7-S38">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksm-Eg-ZqJ">
+                                <rect key="frame" x="29" y="136" width="357" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="予定を追加">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="42"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="Add_button:" destination="b7h-B9-yFC" eventType="touchUpInside" id="UVA-Cl-cjB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dC9-W4-ng9"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nfj-31-B69"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AAr-27-diZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708.6956521739132" y="-364.28571428571428"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="r3P-UU-anO">
             <objects>
@@ -79,7 +107,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fcf-TD-fj4">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                     </navigationBar>
                     <connections>
                         <segue destination="plT-ys-cKA" kind="relationship" relationship="rootViewController" id="P3O-sW-8Qt"/>
@@ -94,11 +122,14 @@
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
