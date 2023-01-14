@@ -7,15 +7,7 @@
 
 import UIKit
 
-//ショートカットリスト
-var segmentcontrol_list = ["a","b","c"]
-
 class TableViewController: UITableViewController{
-    //セグメントコントロール
-    @IBOutlet weak var segmentcontrol: UISegmentedControl!
-    var segment_count = 1
-    var todo_check = [Bool]()
-    
     
     
     override func viewDidLoad() {
@@ -29,8 +21,14 @@ class TableViewController: UITableViewController{
     }
     
     //セグメントコントロール
-    @IBOutlet weak var segmentControl: UISegmentedControl!
-    let segmentedControl = UISegmentedControl(items: segmentcontrol_list)
+    @IBOutlet weak var segment: UISegmentedControl!
+    let segmentNames = ["やること", "完了したこと", "やりたいこと"]
+        segment.removeAllSegments()
+        for (index, name) in segmentNames.enumerated() {
+            segment.insertSegment(withTitle: name, at: index, animated: false)
+        }
+    
+    
     @IBAction func selectedSegment(_ sender: Any) {
         tableView.reloadData()
     }
