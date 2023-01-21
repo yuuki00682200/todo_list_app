@@ -85,6 +85,9 @@ class TableViewController: UITableViewController{
                 }else{
                     self.addNewTodoItem1(title: title)
                     self.tableView.reloadData()
+                    self.tableView.beginUpdates()
+                    self.tableView.insertRows(at: [IndexPath(row: self.todo_list.count-1, section: 0)], with: .top)
+                    self.tableView.endUpdates()
                 }
             }
         }))
