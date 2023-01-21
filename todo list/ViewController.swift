@@ -8,18 +8,22 @@
 import UIKit
 
 class TableViewController: UITableViewController{
-    
     @IBOutlet weak var segment: UISegmentedControl!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
+        
+        //ショートカット追加
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "ショートカットを追加", style: .done, target: self, action: #selector(self.didTapAddItemButton(_:)))
+        //予定を追加
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "予定を追加", style: .done, target: self, action: #selector(add_event(_:)))
+        
         //予定を読み込む
         todo_list = UserDefaults.standard.object(forKey: "todo_list_key") as! [String]
         
-        //ショートカットを追加
-        segmentNames = UserDefaults.standard.object(forKey: "segmentname_key") as! [String]
+        //ショートカットを読み込む
         segment.removeAllSegments()
         for (index, name) in segmentNames.enumerated() {
             segment.insertSegment(withTitle: name, at: index, animated: false)
@@ -64,5 +68,55 @@ class TableViewController: UITableViewController{
         todo_list.remove(at: indexPath.row)
         UserDefaults.standard.set(todo_list, forKey: "todo_list_key")
         tableView.deleteRows(at: [indexPath], with: .top)
+    }
+    
+    //ショートカットの追加
+    @objc func didTapAddItemButton(_ sender: UIBarButtonItem){
+        let alert = UIAlertController(title: "追加する項目", message: "ショートカットに新しい内容を追加します。", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: nil)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(_) in
+            if let title = alert.textFields?[0].text
+            {
+                if title == ""{
+                    let al = UIAlertController(title: "エラー", message: "テキストを入力してください", preferredStyle: .alert)
+                    al.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(al, animated: true, completion: nil)
+                }else{
+                    self.addNewTodoItem1(title: title)
+                }
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    //追加されたら更新
+    func addNewTodoItem1(title: String){
+        segmentNames.append(title)
+    }
+    
+    
+    //予定を追加
+    @objc func add_event(_ sender: UIBarButtonItem){
+        let alert = UIAlertController(title: "追加する項目", message: "予定に新しい内容を追加します。", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: nil)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(_) in
+            if let title = alert.textFields?[0].text
+            {
+                if title == ""{
+                    let al = UIAlertController(title: "エラー", message: "テキストを入力してください", preferredStyle: .alert)
+                    al.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(al, animated: true, completion: nil)
+                }else{
+                    self.addNewTodoItem2(title: title)
+                }
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    //追加されたら更新
+    func addNewTodoItem2(title: String){
+        todo_list.append(title)
+        UserDefaults.standard.set(todo_list, forKey: "todo_list_key")
     }
 }

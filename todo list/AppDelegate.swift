@@ -11,7 +11,7 @@ import UIKit
 var todo_list = [""]
 
 //segmentname
-var segmentNames = [""]
+var segmentNames = ["1"]
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -37,4 +37,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
