@@ -84,6 +84,7 @@ class TableViewController: UITableViewController{
                     self.present(al, animated: true, completion: nil)
                 }else{
                     self.addNewTodoItem1(title: title)
+                    //ここ変更すれば動きそうですね
                 }
             }
         }))
